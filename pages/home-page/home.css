@@ -1,0 +1,14 @@
+h1 {
+    font-weight: bold;
+    color: indianred;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#container {
+    width: 100px;
+    height: 100px;
+    background-color: #008080;
+    padding: 7px;
+    border: solid 1px #c3c3c3;
+}

@@ -1,0 +1,9 @@
+#loading-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background-color: var(--carmim);
+    width: 0%;
+    transition: width 0.1s;
+}

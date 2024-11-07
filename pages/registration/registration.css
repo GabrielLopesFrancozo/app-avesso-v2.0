@@ -1,0 +1,51 @@
+@import url("../../styles/variables.css");
+
+body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+form .area-input {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.card-cadastro,
+.card-login {
+  width: 18rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 15px;
+  gap: 10px;
+  background-color: var(--gray-100);
+}
+
+.or-divider {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+}
+
+.divider {
+  width: 100%;
+  height: 2px;
+  background-color: var(--gray-600);
+}

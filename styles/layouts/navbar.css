@@ -1,0 +1,72 @@
+/* Root colors */
+@import url("../variables.css");
+
+/* Roboto regular - Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.navbar {
+    width: 15rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 30px;
+    border-right: 1px solid var(--gray-100);
+}
+
+.navbar-nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.nav-link, .logout-button {
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.3rem;
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: var(--gray-600);
+}
+
+.bi {
+    font-size: 1.3rem;
+    color: var(--gray-600);
+}
+
+.nav-item.active .bi, .nav-item.active .nav-link, .nav-item.active {
+    color: var(--carmim);
+    font-weight: 700;
+    font-size: 1.32rem;
+}
+
+.nav-bottom {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    justify-content: flex-end;
+}
+
+.divider {
+    width: 100%;
+    height: 2px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: var(--gray-100);
+  }
