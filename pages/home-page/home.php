@@ -25,7 +25,7 @@ if ($dados) {
     <button>Filtros</button>
     <p class="filters">#All</p>
 </div>
-<img src="<?= '../../assets/img/users/user-profile/' . $randomId . '.png'?>" width="400" alt="Foto usu">
+<img src="<?= './assets/img/users/user-profile/' . $randomId . '.png'?>" width="400" alt="Foto usu">
 <div class="bio">
     <h3><?= $dados['nomeUsuario'] ?></h3>
     <p><?= $dados['bioUsuario'] ?></p>

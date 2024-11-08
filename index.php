@@ -20,6 +20,8 @@ if (!isset($_SESSION["idUsuario"])) {
     <link rel="stylesheet" href="./styles/global.css">
     <link rel="stylesheet" href="./styles/layouts/navbar.css">
     <link rel="stylesheet" href="./styles/layouts/loading-bar.css">
+    <link rel="stylesheet" href="./styles/layouts/tool-bar.css">
+    <link rel="stylesheet" href="./styles/layouts/search-input.css">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
