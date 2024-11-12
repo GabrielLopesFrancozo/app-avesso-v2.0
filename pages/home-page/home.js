@@ -1,6 +1,15 @@
-$("#btn-in").click(function () {
-    $('#container').fadeIn('fast');
-});
-$("#btn-out").click(function () {
-    $('#container').fadeOut('slow');
+$("#Detona").on('click', function (event) {
+    event.preventDefault();
+
+    $.ajax({
+        url: './index.php',
+        type: 'POST',
+        success: function (response) {
+            
+        },
+        error: function (xhr, status, error) {
+          alert("Ocorreu um erro ao enviar a mensagem.");
+          console.error(error);
+        }
+      });
 });

@@ -1,69 +1,272 @@
-.container {
-    height: 100%;
-    display: flex;
-    flex-direction: row;
+* {
+  font-family: Roboto;
+}
+
+.chat-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
 }
 
 .contacts-container {
-    height: 100%;
-    width: 18rem;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    background-color: darkcyan;
+  height: 100%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: var(--ice);
+  border-right: 1px solid var(--gray-100);
+}
+
+.page-title {
+  height: 60px;
+  padding-left: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  color: var(--gray-900);
 }
 
 .search-input-container {
-    height: 50px;
-    background-color: brown;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
 }
 
 .filter-container {
-    width: 100%;
-    height: 50px;
-    background-color: chocolate;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 5px;
+  padding-left: 16px;
+}
+
+.chat-filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white);
+  border: 1px solid var(--gray-100);
+  border-radius: 100px;
+  padding: 5px;
+  gap: 5px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: var(--gray-600);
+
+  i {
+    color: var(--gray-600);
+    font-size: 0.8rem;
+  }
+}
+
+.chat-filter:hover {
+  background-color: var(--carmim);
+  border: 1px solid var(--carmim);
+  color: var(--white);
+
+  i {
+    color: var(--white);
+  }
 }
 
 .chats-container {
-    width: 100%;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    padding: 5px;
-    background-color: rgb(158, 102, 29);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .chat {
-    height: 40px;
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: center;
-    padding-right: 5px;
-    padding-left: 5px;
-    gap: 5px;
-    background-color: aliceblue;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  padding: 15px;
+  gap: 5px;
+  cursor: pointer;
 }
 
 .chat:hover {
-    background-color: beige;
+  background-color: var(--gray-100);
 }
 
 .contact-user-profile {
-    width: 30px;
-    height: 30px;
-    background-color: cadetblue;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  background-image: url(../../assets/img/app-imgs/Default-avatar.svg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
 }
 
-.contact-message-conatiner {
-    width: 70%;
-    height: 30px;
-    background-color: rgb(160, 139, 95);
+.contact-message-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-left: 5px;
 }
 
 .contact-message-notification {
-    width: 30px;
-    height: 30px;
-    background-color: var(--carmim);
+  height: 75%;
+  aspect-ratio: 1 / 1;
+  border-radius: 100px;
+  background-color: var(--carmim);
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.7rem;
+  font-family: Roboto;
+  padding: 5px;
+}
+
+.messages-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.messages-main {
+  display: none;
+}
+
+.messages {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 5px;
+}
+
+.send-messages-container {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  background-color: rgb(255, 255, 255);
+}
+
+/* Código uiverse.io - https://uiverse.io/vinodjangid07/good-donkey-28 - Send Message */
+
+.messageBox {
+  width: fit-content;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--ice);
+  padding: 0 16px 0 0;
+  border-radius: 10px;
+  border: 1px solid var(--gray-100);
+}
+
+.messageBox:focus-within {
+  border: 1px solid var(--gray-100);
+}
+
+#messageInput {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding-left: 16px;
+  color: var(--gray-900);
+}
+
+#messageInput:focus~#sendButton svg path,
+#messageInput:valid~#sendButton svg path {
+  stroke: var(--carmim);
+}
+
+#sendButton {
+  width: fit-content;
+  height: 100%;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+#sendButton svg {
+  height: 22px;
+  transition: all 0.3s;
+}
+
+#sendButton svg path {
+  transition: all 0.3s;
+}
+
+#sendButton:hover svg path {
+  stroke: var(--carmim);
+}
+
+/* Fim do Código uiverse.io */
+
+.messages-main {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.msg-you {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.msg-others {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.msg-box-you {
+  width: fit-content;
+  min-height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--carmim);
+  color: var(--white);
+  padding: 0 16px;
+  border-radius: 10px;
+}
+
+.msg-box-others {
+  width: fit-content;
+  min-height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--gray-100);
+  color: var(--gray-900);
+  padding: 0 16px;
+  border-radius: 10px;
 }

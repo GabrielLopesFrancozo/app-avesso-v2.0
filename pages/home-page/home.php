@@ -16,27 +16,47 @@ if ($dados) {
     echo "Nenhum outro ID foi encontrado na tabela.";
 }
 
-
 ?>
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
 <link rel="stylesheet" href="./home.css">
+<div class="tela">
+    <div class="filters-container">
+        <button class="espiar"><i class="bi bi-eye"></i>Espiar</button>
+        <button class="filter"><i class="bi bi-filter"></i>Filtros</button>
+        <p class="hashtags">#All</p>
+    </div>
+    <div class="divider"></div>
+    <div class="content">
+        <div class="content-image">
+            <img src="<?= './assets/img/users/user-profile/26.png' ?>" class="img" alt="Foto usuario">
+            <div class="blur-container">
+                <form method="post" class="options-container">
+                    <button id="Detona" type="submit"><i class="bi bi-x-lg"></i></button>
+                    <button id="Cantada"><i class="bi bi-chat-square-heart-fill"></i></button>
+                    <button id="Apaixona"><i class="bi bi-suit-heart-fill"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="info">
+            <div class="bio">
+                <h3 class="nome"><?= $dados['nomeUsuario'] ?></h3>
+                <h4>Brazil</h4>
+                <p class="bio-user"><?= $dados['bioUsuario'] ?></p>
+            </div>
+            <div class="divider"></div>
+            <div class="hashtags-container">
+                <label>#Viagens #Amigos #Festas</label>
+            </div>
+            <div class="perguntas">
+                <h3 class="pergunta">Maior(es) sonho(s)</h3>
+                <p>Conhecer a Noruega. Eu realmente AMO o frio e acho as montanhas nevadas norueguesas a coisa mais linda do mundo!</p>
+            </div>
+        </div>
+        <!-- JQuery Script -->
+        <script src="../../js/jquery.js"></script>
 
-<div class="filters-container">
-    <button>Espiar</button>
-    <button>Filtros</button>
-    <p class="filters">#All</p>
-</div>
-<img src="<?= './assets/img/users/user-profile/' . $randomId . '.png'?>" width="400" alt="Foto usu">
-<div class="bio">
-    <h3><?= $dados['nomeUsuario'] ?></h3>
-    <p><?= $dados['bioUsuario'] ?></p>
-</div>
-
-<form action="" method="post">
-    <button type="submit">Detona</button>
-    <a href="index.php?menu=chat&id=<?= $randomId ?>">Apaixona</a>
-</form>
-
-<!-- JQuery Script -->
-<script src="../../js/jquery.js"></script>
-
-<script src="home.js"></script>
+        <script src="home.js"></script>
+    </div>

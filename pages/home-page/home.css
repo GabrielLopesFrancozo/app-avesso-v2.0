@@ -1,0 +1,158 @@
+* {
+    font-family: Roboto;
+}
+
+.tela {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+    padding: 2rem 4rem;
+}
+
+.filters-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 0.5rem;
+    gap: 0.5rem;
+}
+
+.espiar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: 2rem;
+    border: 1px solid #ECECEC;
+    border-radius: 150px;
+    color: #6E6E6E;
+    background: transparent;
+}
+
+.bi-filter {
+    color: #FFFFFF;
+}
+
+.filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: 2rem;
+    border: none;
+    border-radius: 150px;
+    background: var(--carmim);
+    color: var(--white);
+}
+
+.hashtags {
+    font-weight: 500;
+    color: var(--gray-700);
+}
+
+.content {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.content-image {
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    border-radius: 8px;
+    border: none;
+    width: 75%;
+    height: 100%;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(10px);
+}
+
+.blur-container {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    position: absolute;
+    top: 0;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    padding: 0rem 2rem;
+    gap: 1rem;
+}
+
+.bio {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 1.5rem;
+
+    h4 {
+        font-size: 1.2rem;
+        color: var(--gray-900);
+    }
+}
+
+.nome {
+    color: var(--carmim);
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+.bio-user {
+    display: flex;
+    font-weight: 400;
+    color: var(--gray-700);
+    font-size: 1rem;
+}
+
+.options-container {
+    position: absolute;
+    top: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: end;
+    gap: 1.5rem;
+    padding: 1rem;
+    width: 100%;
+    height: 50%;
+
+    button {
+        height: 5rem;
+        width: 5rem;
+        border-radius: 50%;
+        background-color: #F82167;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        i {
+            color: var(--white);
+            font-size: 2rem;
+        }
+    }
+}

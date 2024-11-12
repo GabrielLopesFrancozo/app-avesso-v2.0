@@ -9,31 +9,37 @@ document.addEventListener("DOMContentLoaded", function () {
                 contentToLoad = './pages/home-page/home.php';
                 cssToLoad = './pages/home-page/home.css';
                 jsToLoad = './pages/home-page/home.js';
+                localStorage.setItem("pagina", "home");
                 break;
             case 'chat':
                 contentToLoad = './pages/chat-page/chat.php';
                 cssToLoad = './pages/chat-page/chat.css';
                 jsToLoad = './pages/chat-page/chat.js';
+                localStorage.setItem("pagina", "chat");
                 break;
             case 'notifications':
                 contentToLoad = './pages/notifications-page/notifications.php';
                 cssToLoad = './pages/notifications-page/notifications.css';
                 jsToLoad = './pages/notifications-page/notifications.js';
+                localStorage.setItem("pagina", "notifications");
                 break;
             case 'search':
                 contentToLoad = './pages/search-page/search.php';
                 cssToLoad = './pages/search-page/search.css';
                 jsToLoad = './pages/search-page/search.js';
+                localStorage.setItem("pagina", "search");
                 break;
             case 'profile':
                 contentToLoad = './pages/profile-page/profile.php';
                 cssToLoad = './pages/profile-page/profile.css';
                 jsToLoad = './pages/profile-page/profile.js';
+                localStorage.setItem("pagina", "profile");
                 break;
             case 'settings':
                 contentToLoad = './pages/settings-page/settings.php';
                 cssToLoad = './pages/settings-page/settings.css';
                 jsToLoad = './pages/settings-page/settings.js';
+                localStorage.setItem("pagina", "settings");
                 break;
             default:
                 contentToLoad = './pages/home-page/home.php';
@@ -129,4 +135,6 @@ document.addEventListener("DOMContentLoaded", function () {
         loadContent(menu);
         updateActiveIcon(menu);
     });
+
+    localStorage.setItem("idUsuario", $("#idUsuario").text());
 });

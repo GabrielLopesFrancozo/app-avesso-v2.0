@@ -1,9 +1,21 @@
 <?php
 
+include("./database/conection.php");
+
 session_start();
 
 if (!isset($_SESSION["idUsuario"])) {
     header("Location: ./pages/registration/login.php");
+} else {
+    $idUsuario = $_SESSION["idUsuario"];
+
+    $sql = "SELECT * FROM tbusuarios WHERE idUsuario = $idUsuario";
+    $result = mysqli_query($conection, $sql);
+    $dados = mysqli_fetch_assoc($result);
+
+    foreach ($dados as $key => $value) {
+        $_SESSION[$key] = $value;
+    }
 }
 
 ?>
@@ -20,17 +32,18 @@ if (!isset($_SESSION["idUsuario"])) {
     <link rel="stylesheet" href="./styles/global.css">
     <link rel="stylesheet" href="./styles/layouts/navbar.css">
     <link rel="stylesheet" href="./styles/layouts/loading-bar.css">
-    <link rel="stylesheet" href="./styles/layouts/tool-bar.css">
+    <link rel="stylesheet" href="./styles/layouts/top-bar.css">
     <link rel="stylesheet" href="./styles/layouts/search-input.css">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
+    <div id="idUsuario" style="display: none;"><?php echo $_SESSION["idUsuario"] ?></div>
     <div id="loading-bar"></div>
     <header>
         <nav class="navbar">
-            <img src="./assets/img/app-imgs/Logo-texto.svg" width="150" alt="Avesso">
+            <img src="./assets/img/app-imgs/Logo.svg" width="150" alt="Avesso">
             <div class="divider"></div>
             <ul class="navbar-nav">
                 <li class="nav-item active" id="home">
@@ -38,7 +51,7 @@ if (!isset($_SESSION["idUsuario"])) {
                     <a class="nav-link" href="#" data-menu="home">Principal</a>
                 </li>
                 <li class="nav-item" id="chat">
-                    <i class="bi bi-chat-heart" data-icon="bi bi-chat-heart" data-icon-filled="bi bi-chat-heart-fill"></i>
+                    <i class="bi bi-chat-dots" data-icon="bi bi-chat-dots" data-icon-filled="bi bi-chat-dots-fill"></i>
                     <a class="nav-link" href="#" data-menu="chat">Conversas</a>
                 </li>
                 <li class="nav-item" id="notifications">
@@ -50,7 +63,7 @@ if (!isset($_SESSION["idUsuario"])) {
                     <a class="nav-link" href="#" data-menu="search">Pesquisar</a>
                 </li>
                 <li class="nav-item" id="profile">
-                    <i class="bi bi-person" data-icon="bi bi-person" data-icon-filled="bi bi-person-circle"></i>
+                    <i class="bi bi-person-circle" data-icon="bi bi-person-circle" data-icon-filled="bi bi-person-circle"></i>
                     <a class="nav-link" href="3" data-menu="profile">Perfil</a>
                 </li>
                 <div class="nav-bottom">
@@ -82,6 +95,7 @@ if (!isset($_SESSION["idUsuario"])) {
 
     <script src="./js/index.js"></script>
     <script src="./pages/registration/logout/logout.js"></script>
+    <script src="chat.js"></script>
 </body>
 
 </html>

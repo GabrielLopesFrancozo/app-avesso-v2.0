@@ -1,51 +1,205 @@
-@import url("../../styles/variables.css");
+@import url(../../styles/variables.css);
+
+@import url(../../styles/layouts/divider.css);
+
+/* Roboto regular - Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
 body {
+  width: 100%;
+  height: 100vh;
   display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: var(--ice);
+  /* background-image: url(../../assets/img/app-imgs/Background.svg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat; */
+}
+
+.registration-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  margin: 0;
+  gap: 3rem;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
+#phone-example {
+  height: 36rem;
 }
 
-form .area-input {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
+@media screen and (max-width: 1024px) {
+  #phone-example {
+    display: none;
+  }
 }
 
-.card-cadastro,
-.card-login {
-  width: 18rem;
+@media screen and (max-width: 576px) {
+  .card {
+    width: 100% !important;
+    height: 100% !important;
+    padding: 4rem !important;
+    border: none;
+    border-radius: 0 !important;
+    gap: 2rem !important;
+  }
+}
+
+.card {
+  width: 24rem;
+  height: fit-content;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 3rem;
+  border-radius: 8px;
   text-align: center;
-  padding: 15px;
-  gap: 10px;
-  background-color: var(--gray-100);
+  border: 1px solid var(--gray-100);
+  background-color: var(--white);
 }
 
-.or-divider {
+#logo {
+  margin-bottom: 0.5rem;
+}
+
+.registration-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.form-title{
+  font-size: 1.2rem;
+  color: var(--gray-900);
+}
+
+.input {
+  width: 100%;
+  height: 2.5rem;
+  outline: none;
+  background-color: transparent;
+  color: var(--gray-900);
+  border: 1px solid var(--gray-100);
+  padding-left: 16px;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+.input-field:focus{
+  border: 1px solid var(--gray-300);
+  transition: all .3s ease-in-out;
+}
+
+.input-field::placeholder{
+  color: var(--gray-300);
+}
+
+.area-input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.password-container {
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 5px;
+  gap: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.button {
+  width: 100%;
+  height: 2.5rem;
+  color: var(--white);
+  padding-left: 16px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--carmim);
+}
+
+.gsi-material-button {
+  background-color: var(--white);
+  background-image: none;
+  border: 1px solid var(--gray-100);
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: var(--gray-900);
+  cursor: pointer;
+  font-size: 14px;
+  height: 2.5rem;
+  letter-spacing: 0.25px;
+  outline: none;
+  overflow: hidden;
+  padding: 0 12px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 100%;
+  min-width: min-content;
+}
+
+.gsi-material-button .gsi-material-button-icon {
+  height: 20px;
+  margin-right: 12px;
+  min-width: 20px;
+  width: 20px;
+}
+
+.gsi-material-button .gsi-material-button-content-wrapper {
+  -webkit-align-items: center;
+  align-items: center;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  height: 100%;
+  justify-content: center;
+  position: relative;
   width: 100%;
 }
 
-.divider {
+.error {
+  color: var(--carmim);
+  padding: 0.5rem;
+  font-size: 0.8rem;
   width: 100%;
-  height: 2px;
-  background-color: var(--gray-600);
+  text-align: center;
+}
+
+.link {
+  color: var(--carmim);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.termos {
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
 }
