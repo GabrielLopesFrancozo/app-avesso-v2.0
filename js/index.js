@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
         // Define os caminhos dos arquivos com base no parâmetro
         switch (menu) {
             case 'home':
+                const elemento = document.getElementById("body");
+                elemento.requestFullscreen();
                 contentToLoad = './pages/home-page/home.php';
                 cssToLoad = './pages/home-page/home.css';
                 jsToLoad = './pages/home-page/home.js';

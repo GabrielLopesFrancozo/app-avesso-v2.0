@@ -60,7 +60,7 @@ $(".chat").click(function () {
   // Define um novo intervalo para atualizar as mensagens
   refreshInterval = setInterval(function () {
     refreshMessages();
-  }, 100);
+  }, 10000);
 });
 
 function refreshMessages() {

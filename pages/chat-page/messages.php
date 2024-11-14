@@ -15,6 +15,8 @@ $rs = mysqli_query($conection, $sql);
 
 ?>
 
+<link rel="stylesheet" href="chat.css">
+
 <div class="messages">
 
     <?php

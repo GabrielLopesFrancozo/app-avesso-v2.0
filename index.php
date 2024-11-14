@@ -38,7 +38,7 @@ if (!isset($_SESSION["idUsuario"])) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
-<body>
+<body id="body">
     <div id="idUsuario" style="display: none;"><?php echo $_SESSION["idUsuario"] ?></div>
     <div id="loading-bar"></div>
     <header>
